@@ -39,7 +39,7 @@ namespace SimpleWebScraper.Test.Unit
                 .WithRegex(@"<a href=\""(.*?)\"" data-id=\""(.*?)\"" class=\""result-title hdrlnk\"">(.*?)</a>")
                 .WithRegexOption(RegexOptions.ExplicitCapture)
                 .WithPart(new ScrapeCriteriaPartBuilder()
-                    .WithRegex(@">(.*?)")
+                    .WithRegex(@">(.*?)<")
                     .WithRegexOption(RegexOptions.Singleline)
                     .Build())
                 .WithPart(new ScrapeCriteriaPartBuilder()
